@@ -1,0 +1,37 @@
+<h3>Cat Info</h3>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Color</th>
+    <th>Age</th>
+    <th>Sex</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <th><%= @cat.name %></th>
+    <th><%= @cat.color %></th>
+    <th><%= @cat.age %></th>
+    <th><%= @cat.sex %></th>
+    <th><%= @cat.description %></th>
+  </tr>
+</table>
+
+
+
+
+
+<h3>Rental Request</h3>
+
+<table>
+  <tr>
+    <th>Start Date</th>
+    <th>End Date</th>
+  </tr>
+  <% requests = CatRentalRequest.where(cat_id: @cat.id) %>
+  <% requests.each do |request| %>
+  <tr>
+      <td><%= request.start_date %></td>
+      <td><%= request.end_date %></td>
+  </tr>
+  <% end %>
+</table>

@@ -1,0 +1,15 @@
+<h3>Rental Request</h3>
+
+<table>
+  <tr>
+    <th>Cat Name</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+  </tr>
+  <tr>
+    <% name = Cat.find(@cat_rental_request.cat_id).name %>
+    <td><%= name %></td>
+    <td><%= @cat_rental_request.start_date %></td>
+    <td><%= @cat_rental_request.end_date %></td>
+  </tr>
+</table>

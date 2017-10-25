@@ -1,0 +1,18 @@
+<h3>Cats!</h3>
+<table>
+  <colgroup span="4"></colgroup>
+  <tr>
+    <th>Name</th>
+    <th>Color</th>
+    <th>Age</th>
+    <th>Cat Info</th>
+  </tr>
+  <% @cats.each do |cat| %>
+  <tr>
+      <td><%= cat.name %></td>
+      <td><%= cat.color %></td>
+      <td><%= cat.age %></td>
+      <td><%= link_to "Click here!", cat_url(cat) %></td>
+  </tr>
+  <% end %>
+</table>
